@@ -54,7 +54,7 @@ In this hack you will be diagnosing application performance issues getting detai
 
 ### Description
 
-**To have the correct services available to be successful in the upcoming challenges you will need to create a GKE cluster with workload identity and Cloud Operations Logging and Monitoring enabled. Cloud Tace will also need to be enabled for further visibility in to the application that will be deployed. **
+To have the correct services available to be successful in the upcoming challenges you will need to create a GKE cluster with workload identity and Cloud Operations Logging and Monitoring enabled. Cloud Tace will also need to be enabled for further visibility in to the application that will be deployed.
 
 
 ### Success Criteria
@@ -70,20 +70,79 @@ In this hack you will be diagnosing application performance issues getting detai
 
 *List of relevant links and online articles that should give the attendees the knowledge needed to complete the challenge.*
 
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit.**
+**- [Creating a Zonal GKE Standard Cluster](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-zonal-cluster)**
 
-**- Fusce commodo nulla elit, vitae scelerisque lorem maximus eu.**
+**- [Cloud Trace Overview](https://cloud.google.com/trace/docs/overview)**
 
-**- Nulla vitae ante turpis. Etiam tincidunt venenatis mauris, ac volutpat augue rutrum sed. Vivamus dignissim est sed dolor luctus aliquet. Vestibulum cursus turpis nec finibus commodo.**
+**- [Enable Cloud Monitoring API](https://cloud.google.com/monitoring/api/enable-api#gcloud-cli)**
+
+**- [Enable Cloud Logging API](https://cloud.google.com/logging/docs/api/enable-api)**
 
 
-### Tips (Optional)
+### Tips
 
 *Add tips and hints here to give students food for thought.*
 
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit.**
+**- gcloud cli is your friend for speed.**
 
-**- Fusce commodo nulla elit, vitae scelerisque lorem maximus eu.**
+**- Workload Monitoring in GKE has been deprecated as of 1.24 and is now part of Managed Prometheus. You can deploy a cluster with version 1.23 to enable the legacy Stackdriver workload Metrics**
+
+
+### Advanced Challenges (Optional)
+
+*Too comfortable?  Eager to do more?  Try these additional challenges!*
+
+**- Instead of using the now deprecated Cloud Operations Workload Metrics use [Google Managed Prometheus](https://cloud.google.com/stackdriver/docs/solutions/gke/gmp-migration) in your GKE cluster**
+
+
+## Challenge 1: Deploy a Microservices Application
+
+### Challenge Pre-requisites
+
+**- a GKE standard Cluster**
+
+**- gcloud CLI authenticated to the correct project**
+
+**- kubectl installed with context for the GKE cluster selected**
+
+### Introduction
+
+**In this challenge you will deploy a small sample multi-service application that has not been instrumented for OpenTelemetry**
+
+### Description
+
+**To have the correct services available to be successful in the upcoming challenges you will need to create a GKE cluster with workload identity and Cloud Operations Logging and Monitoring enabled. Cloud Tace will also need to be enabled for further visibility in to the application that will be deployed.**
+
+
+### Success Criteria
+
+**- A zonal GKE standard cluster with 3 nodes is accessible via kubectl**
+
+**- Cloud Logging and Monitoring are enabled and GKE dashboard is receiving information**
+
+**- Cloud Trace Dashboard is accessible (*Note:* it will not have any traces as of yet)**
+
+
+### Learning Resources
+
+*List of relevant links and online articles that should give the attendees the knowledge needed to complete the challenge.*
+
+**- [Creating a Zonal GKE Standard Cluster](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-zonal-cluster)**
+
+**- [Cloud Trace Overview](https://cloud.google.com/trace/docs/overview)**
+
+**- [Enable Cloud Monitoring API](https://cloud.google.com/monitoring/api/enable-api#gcloud-cli)**
+
+**- [Enable Cloud Logging API](https://cloud.google.com/logging/docs/api/enable-api)**
+
+
+### Tips
+
+*Add tips and hints here to give students food for thought.*
+
+**- gcloud cli is your friend for speed.**
+
+**- Workload Monitoring in GKE has been deprecated as of 1.24 and is now part of Managed Prometheus. You can deploy a cluster with version 1.23 to enable the legacy Stackdriver workload Metrics or use [Managed Prometheus](https://cloud.google.com/stackdriver/docs/solutions/gke/gmp-migration)**
 
 
 ### Advanced Challenges (Optional)
